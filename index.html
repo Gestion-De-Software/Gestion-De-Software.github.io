@@ -1,703 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Course</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Course Project">
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/w3images/parallax1.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
 <body>
 
-<div class="super_container">
-
-	<!-- Header -->
-
-	<header class="header d-flex flex-row">
-		<div class="header_content d-flex flex-row align-items-center">
-			<!-- Logo -->
-			<div class="logo_container">
-				<div class="logo">
-					<img src="images/logo.png" alt="">
-					<span>course</span>
-				</div>
-			</div>
-
-			<!-- Main Navigation -->
-			<nav class="main_nav_container">
-				<div class="main_nav">
-					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="#">home</a></li>
-						<li class="main_nav_item"><a href="#">about us</a></li>
-						<li class="main_nav_item"><a href="courses.html">courses</a></li>
-						<li class="main_nav_item"><a href="elements.html">elements</a></li>
-						<li class="main_nav_item"><a href="news.html">news</a></li>
-						<li class="main_nav_item"><a href="contact.html">contact</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-		<div class="header_side d-flex flex-row justify-content-center align-items-center">
-			<img src="images/phone-call.svg" alt="">
-			<span>+43 4566 7788 2457</span>
-		</div>
-
-		<!-- Hamburger -->
-		<div class="hamburger_container">
-			<i class="fas fa-bars trans_200"></i>
-		</div>
-
-	</header>
-	
-	<!-- Menu -->
-	<div class="menu_container menu_mm">
-
-		<!-- Menu Close Button -->
-		<div class="menu_close_container">
-			<div class="menu_close"></div>
-		</div>
-
-		<!-- Menu Items -->
-		<div class="menu_inner menu_mm">
-			<div class="menu menu_mm">
-				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="#">Home</a></li>
-					<li class="menu_item menu_mm"><a href="#">About us</a></li>
-					<li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
-					<li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
-				</ul>
-
-				<!-- Menu Social -->
-				
-				<div class="menu_social_container menu_mm">
-					<ul class="menu_social menu_mm">
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
-					</ul>
-				</div>
-
-				<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
-			</div>
-
-		</div>
-
-	</div>
-	
-	<!-- Home -->
-
-	<div class="home">
-
-		<!-- Hero Slider -->
-		<div class="hero_slider_container">
-			<div class="hero_slider owl-carousel">
-				
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">1 <span>2</span> today!</h1>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">hilari <span>web</span> today!</h1>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
-			<div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div>
-		</div>
-
-	</div>
-
-	<div class="hero_boxes">
-		<div class="hero_boxes_inner">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="images/earth-globe.svg" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Online Courses</h2>
-								<a href="courses.html" class="hero_box_link">view more</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="images/books.svg" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Our Library</h2>
-								<a href="courses.html" class="hero_box_link">view more</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="images/professor.svg" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Our Teachers</h2>
-								<a href="teachers.html" class="hero_box_link">view more</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Popular -->
-
-	<div class="popular page_section">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Popular Courses</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="row course_boxes">
-				
-				<!-- Popular Course Item -->
-				<div class="col-lg-4 course_box">
-					<div class="card">
-						<img class="card-img-top" src="images/course_1.jpg" alt="https://unsplash.com/@kellybrito">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">A complete guide to design</a></div>
-							<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
-						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Popular Course Item -->
-				<div class="col-lg-4 course_box">
-					<div class="card">
-						<img class="card-img-top" src="images/course_2.jpg" alt="https://unsplash.com/@cikstefan">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">Beginners guide to HTML</a></div>
-							<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
-						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Popular Course Item -->
-				<div class="col-lg-4 course_box">
-					<div class="card">
-						<img class="card-img-top" src="images/course_3.jpg" alt="https://unsplash.com/@dsmacinnes">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">Advanced Photoshop</a></div>
-							<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
-						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>		
-	</div>
-
-	<!-- Register -->
-
-	<div class="register">
-
-		<div class="container-fluid">
-			
-			<div class="row row-eq-height">
-				<div class="col-lg-6 nopadding">
-					
-					<!-- Register -->
-
-					<div class="register_section d-flex flex-column align-items-center justify-content-center">
-						<div class="register_content text-center">
-							<h1 class="register_title">Register now and get a discount <span>50%</span> discount until 1 January</h1>
-							<p class="register_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempo.</p>
-							<div class="button button_1 register_button mx-auto trans_200"><a href="#">register now</a></div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="col-lg-6 nopadding">
-					
-					<!-- Search -->
-
-					<div class="search_section d-flex flex-column align-items-center justify-content-center">
-						<div class="search_background" style="background-image:url(images/search_background.jpg);"></div>
-						<div class="search_content text-center">
-							<h1 class="search_title">Search for your course</h1>
-							<form id="search_form" class="search_form" action="post">
-								<input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Course Name" required="required" data-error="Course name is required.">
-								<input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Category">
-								<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Degree">
-								<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">search course</button>
-							</form>
-						</div> 
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Services -->
-
-	<div class="services page_section">
-		
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Our Services</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="row services_row">
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/earth-globe.svg" alt="">
-					</div>
-					<h3>Online Courses</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/exam.svg" alt="">
-					</div>
-					<h3>Indoor Courses</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/books.svg" alt="">
-					</div>
-					<h3>Amazing Library</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/professor.svg" alt="">
-					</div>
-					<h3>Exceptional Professors</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/blackboard.svg" alt="">
-					</div>
-					<h3>Top Programs</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/mortarboard.svg" alt="">
-					</div>
-					<h3>Graduate Diploma</h3>
-					<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Testimonials -->
-
-	<div class="testimonials page_section">
-		<!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
-		<div class="testimonials_background_container prlx_parent">
-			<div class="testimonials_background prlx" style="background-image:url(images/testimonials_background.jpg)"></div>
-		</div>
-		<div class="container">
-
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>What our students say</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					
-					<div class="testimonials_slider_container">
-
-						<!-- Testimonials Slider -->
-						<div class="owl-carousel owl-theme testimonials_slider">
-							
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="images/testimonials_user.jpg" alt="">
-										</div>
-										<div class="testimonial_name">james cooper</div>
-										<div class="testimonial_title">Graduate Student</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="images/testimonials_user.jpg" alt="">
-										</div>
-										<div class="testimonial_name">james cooper</div>
-										<div class="testimonial_title">Graduate Student</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="images/testimonials_user.jpg" alt="">
-										</div>
-										<div class="testimonial_name">james cooper</div>
-										<div class="testimonial_title">Graduate Student</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- Events -->
-
-	<div class="events page_section">
-		<div class="container">
-			
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Upcoming Events</h1>
-					</div>
-				</div>
-			</div>
-			
-			<div class="event_items">
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">January</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#">Student Festival</a></div>
-									<div class="event_location">Grand Central Park</div>
-									<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
-								</div>
-							</div>
-
-							<div class="col-lg-4 order-lg-3 order-1">
-								<div class="event_image">
-									<img src="images/event_1.jpg" alt="https://unsplash.com/@theunsteady5">
-								</div>
-							</div>
-
-						</div>	
-					</div>
-				</div>
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">January</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#">Open day in the Univesrsity campus</a></div>
-									<div class="event_location">Grand Central Park</div>
-									<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
-								</div>
-							</div>
-
-							<div class="col-lg-4 order-lg-3 order-1">
-								<div class="event_image">
-									<img src="images/event_2.jpg" alt="https://unsplash.com/@claybanks1989">
-								</div>
-							</div>
-
-						</div>	
-					</div>
-				</div>
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">January</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#">Student Graduation Ceremony</a></div>
-									<div class="event_location">Grand Central Park</div>
-									<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
-								</div>
-							</div>
-
-							<div class="col-lg-4 order-lg-3 order-1">
-								<div class="event_image">
-									<img src="images/event_3.jpg" alt="https://unsplash.com/@juanmramosjr">
-								</div>
-							</div>
-
-						</div>	
-					</div>
-				</div>
-
-			</div>
-				
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			
-			<!-- Newsletter -->
-
-			<div class="newsletter">
-				<div class="row">
-					<div class="col">
-						<div class="section_title text-center">
-							<h1>Subscribe to newsletter</h1>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col text-center">
-						<div class="newsletter_form_container mx-auto">
-							<form action="post">
-								<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-									<input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
-									<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Footer Content -->
-
-			<div class="footer_content">
-				<div class="row">
-
-					<!-- Footer Column - About -->
-					<div class="col-lg-3 footer_col">
-
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo">
-								<img src="images/logo.png" alt="">
-								<span>course</span>
-							</div>
-						</div>
-
-						<p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
-
-					</div>
-
-					<!-- Footer Column - Menu -->
-
-					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Menu</div>
-						<div class="footer_column_content">
-							<ul>
-								<li class="footer_list_item"><a href="#">Home</a></li>
-								<li class="footer_list_item"><a href="#">About Us</a></li>
-								<li class="footer_list_item"><a href="courses.html">Courses</a></li>
-								<li class="footer_list_item"><a href="news.html">News</a></li>
-								<li class="footer_list_item"><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Footer Column - Usefull Links -->
-
-					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Usefull Links</div>
-						<div class="footer_column_content">
-							<ul>
-								<li class="footer_list_item"><a href="#">Testimonials</a></li>
-								<li class="footer_list_item"><a href="#">FAQ</a></li>
-								<li class="footer_list_item"><a href="#">Community</a></li>
-								<li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-								<li class="footer_list_item"><a href="#">Tuitions</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Footer Column - Contact -->
-
-					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Contact</div>
-						<div class="footer_column_content">
-							<ul>
-								<li class="footer_contact_item">
-									<div class="footer_contact_icon">
-										<img src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g">
-									</div>
-									Blvd Libertad, 34 m05200 Arévalo
-								</li>
-								<li class="footer_contact_item">
-									<div class="footer_contact_icon">
-										<img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
-									</div>
-									0034 37483 2445 322
-								</li>
-								<li class="footer_contact_item">
-									<div class="footer_contact_icon">
-										<img src="images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g">
-									</div>hello@company.com
-								</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<!-- Footer Copyright -->
-
-			<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
-				<div class="footer_copyright">
-					<span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
-				</div>
-				<div class="footer_social ml-sm-auto">
-					<ul class="menu_social">
-						<li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-	</footer>
-
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>I love photography</em></p>
+  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 
 </body>
 </html>
